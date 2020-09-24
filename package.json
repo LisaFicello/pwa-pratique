@@ -1,0 +1,20 @@
+{
+  "name": "pwa-pratique",
+  "version": "1.0.0",
+  "description": "first project about pwa  author : Lisa Figarelli organisation : Universita di Corsica  section : Master 2 Développeur Full Stack year : 2020/2021",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LisaFicello/pwa-pratique.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LisaFicello/pwa-pratique/issues"
+  },
+  "homepage": "https://github.com/LisaFicello/pwa-pratique#readme"
+}
