@@ -4,6 +4,8 @@
   "description": "first project about pwa  author : Lisa Figarelli organisation : Universita di Corsica  section : Master 2 Développeur Full Stack year : 2020/2021",
   "main": "main.js",
   "scripts": {
+    "jsonserver": "json-server -p 3001 --watch db.json",
+    "start": "live-server --port=3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/LisaFicello/pwa-pratique/issues"
   },
-  "homepage": "https://github.com/LisaFicello/pwa-pratique#readme"
+  "homepage": "https://github.com/LisaFicello/pwa-pratique#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
 }
