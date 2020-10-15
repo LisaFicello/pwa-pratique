@@ -7,12 +7,14 @@ addTechnoForm.addEventListener('submit', evt => {
     evt.preventDefault();
     
     const payload = {
+        id: Date.now(), // On ajoute l'id pour notre FASS
         name: technonameField.value,
         description: technoDescriptionField.value,
         url: technoUrlField.value
     }
 
-    fetch('http://localhost:3001/technos', { 
+
+    fetch('https://us-central1-pwa-technos-lisa.cloudfunctions.net/addTechno', {  
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'

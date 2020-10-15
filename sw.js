@@ -82,8 +82,15 @@ self.addEventListener('fetch', (evt) => {
     //     )
     // );
 
-    // 5.3 Stratégie de network first with cache fallback
+    // 9.6 Synchroniser les données au retour de la connexion
+    // console.log('evt', evt);
+    // to prevent this error when posting a form: 
+    // "Uncaught (in promise) TypeError: Request method 'POST' is unsupported at caches.open.then.cache"
+    if(evt.request.method === 'POST') {
+        return;
+    }
 
+    // 5.3 Stratégie de network first with cache fallback
     // On doit envoyer une réponse
     evt.respondWith(
         // on doit d'abord faire une requête sur le réseau de ce qui a été intercepté
