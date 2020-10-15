@@ -35,7 +35,7 @@ if(navigator.serviceWorker) {
         
         	// tentative d'obtention d'une souscription
             // public vapid key générée par web-push, en prod appel d'api via fetch plutôt que static
-            const publicKey = "BAqPpl5snI2RR6wkcuSzdvZWGeEqNk4GGJvMWpTqrepaOrEqknEAS5dfcOakn0mSrh7o0PAYv8Urt8GUdCzILvw";
+            const publicKey = "BND-dro75b2clF-_FVnYqn3TMBIOgaaMyq8dkpgdkQMB7mLHbpWKu1JKVSQQyGm4zt5sHyEGMm1bWKJfrk31MTY";
             registration.pushManager.getSubscription().then(subscription => {
             
             	// Déjà une souscription, on l'affiche
