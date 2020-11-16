@@ -24,6 +24,24 @@ function loadTechnologies(technos) {
 
 loadTechnologies(technos);
 
+// 8.4 Récupération ou création d'une souscription auprès d'un push service
+// Fonction pour récupérer les clés de la souscription afin de les utiliser pour notification
+function extractKeysFromArrayBuffer(subscription){
+    // no more keys proprety directly visible on the subscription objet. So you have to use getKey()
+    const keyArrayBuffer = subscription.getKey('p256dh');
+    const authArrayBuffer = subscription.getKey('auth');
+    const p256dh = btoa(String.fromCharCode.apply(null, new Uint8Array(keyArrayBuffer)));
+    const auth = btoa(String.fromCharCode.apply(null, new Uint8Array(authArrayBuffer)));
+    console.log('p256dh key', keyArrayBuffer, p256dh);
+    console.log('auth key', authArrayBuffer, auth);
+    
+    // Paramètres nécessaires à l'objet de notification pushSubscription
+    console.log('endpoint :');
+    console.dir(subscription.endpoint);
+    console.log('p256dh key :', p256dh);
+    console.log('auth key :', auth);
+}  
+
 // 3.2
 if(navigator.serviceWorker) {
 	// Enregistrement du service worker
@@ -112,20 +130,3 @@ function urlBase64ToUint8Array(base64String) {
     return outputArray;
   }
   
-// 8.4 Récupération ou création d'une souscription auprès d'un push service
-// Fonction pour récupérer les clés de la souscription afin de les utiliser pour notification
-function extractKeysFromArrayBuffer(subscription){
-    // no more keys proprety directly visible on the subscription objet. So you have to use getKey()
-    const keyArrayBuffer = subscription.getKey('p256dh');
-    const authArrayBuffer = subscription.getKey('auth');
-    const p256dh = btoa(String.fromCharCode.apply(null, new Uint8Array(keyArrayBuffer)));
-    const auth = btoa(String.fromCharCode.apply(null, new Uint8Array(authArrayBuffer)));
-    console.log('p256dh key', keyArrayBuffer, p256dh);
-    console.log('auth key', authArrayBuffer, auth);
-    
-    // Paramètres nécessaires à l'objet de notification pushSubscription
-    console.log('endpoint :');
-    console.dir(subscription.endpoint);
-    console.log('p256dh key :', p256dh);
-    console.log('auth key :', auth);
-}  
