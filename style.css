@@ -3,6 +3,13 @@ body {
     margin: 30px;
 }
 
+/* Home */
+.card {
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 .row:first-child{
     border-bottom: 1px solid #ced4da;
     margin-bottom: 30px;;
