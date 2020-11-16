@@ -1,4 +1,4 @@
-var cacheName = 'veille-techno' + '1.3';
+const cacheName = 'veille-techno' + '1.3';
 
 // 9.6 Synchroniser les données au retour de la connexion
 // Ajout des imports pour les appels méthodes hors connexion
