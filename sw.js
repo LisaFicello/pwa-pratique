@@ -1,5 +1,3 @@
-//var cacheName = 'veille-techno' + '1.2';
-	
 var cacheName = 'veille-techno' + '1.3';
 
 // 9.6 Synchroniser les données au retour de la connexion
